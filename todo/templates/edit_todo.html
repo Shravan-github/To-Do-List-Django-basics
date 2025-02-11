@@ -121,8 +121,8 @@
         <i class="fa-solid fa-right-from-bracket"></i>
         <form method="post" class="todo-form">
             {% csrf_token %}
-            <input type="text" class="todo-input" name="title" required placeholder="Add a Task">
-            <input type="submit" class="submit-button" value="Add">
+            <input type="text" class="todo-input" name="title" required placeholder="Edit Your Task" value={{object.title}}>
+            <input type="submit" class="submit-button" value="Update Task">
         </form>
 
         {% for todo in res%}
@@ -132,14 +132,11 @@
                 <p>{{todo.title}}</p>
                 <br>
                <div>
-               <a href="{% url 'edit_todo' srno=todo.srno %}"><i class="fa-sharp fa-solid fa-pen-to-square"></i></a>             
+                <a href=""><i class="fa-sharp fa-solid fa-pen-to-square"></i>></a>              
                 <a href=""><i class="fa-solid fa-trash"></i></a>
                </div>
             </div>
-            <!-- <div class="task">
-                <span>Finish project</span>
-                <button class="delete-btn">X</button>
-            </div> -->
+        
         </div>
         {% endfor %}
     </div>

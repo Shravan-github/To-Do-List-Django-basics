@@ -1,11 +1,148 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" /> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Literata" />
+    <style>
+        /* General Styles */
+body {
+    font-family: 'Crimson Pro', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+/* Signup Container */
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Signup Box */
+.signup-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+/* Heading */
+.heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Line */
+.line {
+    width: 100%;
+    height: 3px;
+    background: #333;
+    margin: 10px auto;
     
+}
+
+/* Input Fields */
+.field {
+    display: grid;
+    width: 100%;
+    margin: 10px 0;
+    text-align: left;
+    justify-items: start;
+    align-content: space-between;
+}
+
+.field b {
+    display: grid;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+
+
+}
+
+.ing {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 14px;
+   
+}
+
+/* Submit Button */
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #007BFF;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+    background: #0056b3;
+}
+
+/* Login Link */
+.anc {
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+}
+
+.anc :hover {
+    text-decoration: underline;
+}
+
+    </style>
+    <script src="https://kit.fontawesome.com/cb792c0850.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="signup-container">
+        <div class="signup-box">
+            <form method="post">
+                {% csrf_token %}
+                <div class="heading">Login</div>
+                <div class="line"></div>
+               
+                <div class="field">
+                    <b>Username</b>
+                    <input type="text" required class="ing" placeholder="Enter your Username" name="fname" />
+                </div>
+                <div class="field">
+                    <b>Password</b>
+                    <input type="password" required class="ing" placeholder="Enter your password" name="password" />
+                </div>
+                <div class="field">
+                    <input type="submit" class="submit-button" value="todo " />
+                </div>
+            </form>
+            <div class="login-text">
+                <b>Don't have an account?</b>
+                <br>
+                <a class="anc" href="">Signup</a>
+            </div>
+        </div>
+
+    </div>
 </body>
+
 </html>
