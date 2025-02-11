@@ -1,0 +1,92 @@
+/* General Styles */
+body {
+    font-family: 'Crimson Pro', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+/* Signup Container */
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Signup Box */
+.signup-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+/* Heading */
+.heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Line */
+.line {
+    width: 50px;
+    height: 3px;
+    background: #333;
+    margin: 10px auto;
+}
+
+/* Input Fields */
+.field {
+    margin: 15px 0;
+    text-align: left;
+}
+
+.field b {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.inp {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Submit Button */
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #007BFF;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+    background: #0056b3;
+}
+
+/* Login Link */
+.anc {
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.anc:hover {
+    text-decoration: underline;
+}
